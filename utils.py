@@ -2,4 +2,6 @@ import pandas as pd
 
 
 def load_data():
-    return pd.read_csv("data/titanic.csv")
+    titanic = pd.read_csv("data/titanic.csv")
+    titanic = titanic[titanic["sex"] == "male"]
+    return titanic
